@@ -1,0 +1,50 @@
+<body>
+  <%- include layouts/layout.ejs %>
+  <div class="container">
+    <fieldset>
+      <form class="form-inline" action="/standings" method="post">
+        <div class="form-group">
+          <label for="league">League:</label>
+          <select name="leagueI">
+              <option value="S"> La Liga </option>
+              <option value="E"> English Premier League </option>
+              <option value="F"> Ligue 1 </option>
+              <option value="I"> Serie A </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="season">Season:</label>
+          <input name="yearI" type="text" class="ghost-input" placeholder="Enter a Year" required>
+        </div>
+        <button type="submit" class="btn btn-default" value="Get Standings">Submit</button>
+      </form>
+      <% if(Stnd !== null){ %>
+        <% if (Stnd.teams.length === 1) { %>
+          <h1>Season has not started yet...</h1>
+        <% } else {%>
+        <table id="cumshot">
+            <tr>
+              <th>Team</th>
+              <th>Match</th>
+              <th>Points</th>
+            </tr>
+            <% for (var i =0;i<20;i++) { %>
+            <tr>
+              <td><%= Stnd.teams[i].team %></td>
+              <td><%= Stnd.teams[i].played %></td>
+              <td><%= Stnd.teams[i].points %></td>
+            </tr>
+            <% } %>
+        </table>
+        <% } %>
+      <% } %>
+
+      <% if(error !== null){ %>
+          <p><%= error %></p>
+        <% } %>
+    </fieldset>
+  </div>
+  <footer >
+  <p class="down">© 2018 | All Right Reserved</p>
+</footer>
+</body>

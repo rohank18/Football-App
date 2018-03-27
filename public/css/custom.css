@@ -1,0 +1,67 @@
+#cumshot {
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+width: 100%;
+}
+
+#cumshot td, #cumshot th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#cumshot tr:nth-child(even){background-color: #f2f2f2;}
+
+#cumshot tr:hover {background-color: #ddd;}
+
+#cumshot th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+#customers1 {
+border-collapse: collapse;
+width: 50%;
+}
+
+#customers1 td, #customers th {
+  padding: 8px;
+}
+
+#customers1 tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers1 tr:hover {background-color: #ddd;}
+
+#customers1 th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+
+
+.down {
+  text-align: center;
+  color: black;
+  font-size: 15px;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow:hidden;
+    background-color: white;
+    padding-top: 20px;
+}
+.color-me{
+    color:white;
+}
